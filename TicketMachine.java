@@ -26,14 +26,14 @@ public class TicketMachine
     public TicketMachine()
     {
         price = 1000;
-        balance = 500;
-        total =0 ;
+        balance = 0;
+        total = 0;
     }
     public TicketMachine(int cost)
      {
        price = cost;
         balance = 0;
-        total =0 ;   
+        total = 0;   
        }
         
     
@@ -124,6 +124,14 @@ public void prompt()
 public void showPrice()
 {
 System.out.println("el precio del billete es " + price);
+}
+
+/**
+ * Vaciar el contador total
+ */
+public void vaciar()
+{
+   total = 0;
 }
 }
 
