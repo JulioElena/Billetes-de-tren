@@ -23,11 +23,11 @@ public class TicketMachine
      * Note that the price must be greater than zero, and there
      * are no checks to ensure this.
      */
-    public TicketMachine(int cost)
+    public TicketMachine()
     {
-        price = cost;
-        balance = 0;
-        total = 0;
+        price = 1000;
+        balance = 500;
+        total =0 ;
     }
 
     /**
@@ -35,7 +35,8 @@ public class TicketMachine
      */
     public int getPrice()
     {
-        return price;
+    
+    return price;
     }
 
     /**
@@ -75,4 +76,49 @@ public class TicketMachine
         // Clear the balance.
         balance = 0;
     }
+
+/** 
+ * Devuelve el valor del campo total
+ */
+
+public int getTotal()
+{
+    return total;
 }
+
+/**
+ * Permite cambiar el valor del precio
+ */
+
+public void setPrice(int cost)
+{
+    price = cost;
+}
+/**
+ * Reducir el precio del billete en la cantidad que se pasa como parametro
+ */
+public void discoint(int amount)
+{
+    price = price - amount;
+}
+
+/**
+ * Saca un mensaje por pantalla
+ */
+public void prompt()
+{
+    System.out.println("Insertar la cantidad correcta de dinero");
+}
+
+/**
+ * Imprime por pantalla el precio del billete
+ */
+public void showPrice()
+{
+System.out.println("el precio del billete es " + price);
+}
+}
+
+
+
+
